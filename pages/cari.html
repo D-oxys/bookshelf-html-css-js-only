@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@100;300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" type="text/css" href="../styles.css" />
+    <title>Ichsan's - Bookshelf</title>
+  </head>
+  <body>
+    <!-- header content -->
+    <header>
+      <h2>Ichsan's - Bookshelf</h2>
+      <div id="hamburger" class="fas fa-bars"></div>
+    </header>
+    <!-- header content end -->
+
+    <!-- Sidebar content -->
+    <div class="container">
+      <aside class="sidebar">
+        <div class="headerSidebar">MENU CARI BUKU</div>
+        <ul class="sidebar-list">
+          <li class="sidebar-item">
+            <a href="../index.html"><i class="fas fa-stream" style="color: #bbc7ce"></i>Daftar Buku </a>
+          </li>
+          <li class="sidebar-item">
+            <a href="./tambahBuku.html"><i class="fas fa-book" style="color: #bbc7ce"></i>Tambah Buku</a>
+          </li>
+          <li class="sidebar-item">
+            <a href="./cari.html"><i class="fas fa-search" style="color: #bbc7ce"></i></i>Cari Buku</a>
+          </li>
+        </ul>
+        <div class="search-bar">
+          <input type="text" id="searchInput" placeholder="Cari buku"/>
+        </div>
+        
+      </aside>
+      <!-- Sidebar content end -->
+
+      <!-- Main content  -->
+      <main class="main-content">
+         <!-- karena saya menggunakan 1 file javascript maka file javascrip saya akan error jika id yang di perlukan tidak ada  -->
+        <form id="addBookForm" style="display: none;"></form>
+        
+        <section id="tambahDataBuku">
+          <h2 class="headerTambahBuku">Daftar Data Buku <span>Ichsan's Bookshelf</span></h2>
+          <div class="cardHeader">Belum Dibaca</div>
+            <div class="bookshelf" id="unreadShelf"></div>
+          
+            <div class="cardHeader border2">Sudah Dibaca</div>
+            <div class="bookshelf" id="readShelf"></div>
+          
+        </section>
+      </main>      
+      <!-- Main content end -->
+    </div>
+
+    <footer>
+      <div class="xsmall">Developed by Mochamad Ichsan NR &copy; <a href="https://github.com/D-oxys">Doxys </a>2023</div>
+      <p class="xsmall hidden">Sekolah Tinggi Teknlogi Bandung</p>
+    </footer>
+  </body>
+  <script src="../script/search.js"></script>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@100;300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" type="text/css" href="../styles.css" />
+    <title>Ichsan's - Bookshelf</title>
+  </head>
+  <body>
+    <!-- header content -->
+    <header>
+      <h2>Ichsan's - Bookshelf</h2>
+      <div id="hamburger" class="fas fa-bars"></div>
+    </header>
+    <!-- header content end -->
+
+    <!-- Sidebar content -->
+    <div class="container">
+      <aside class="sidebar">
+        <div class="headerSidebar">MENU CARI BUKU</div>
+        <ul class="sidebar-list">
+          <li class="sidebar-item">
+            <a href="../index.html"><i class="fas fa-stream" style="color: #bbc7ce"></i>Daftar Buku </a>
+          </li>
+          <li class="sidebar-item">
+            <a href="./tambahBuku.html"><i class="fas fa-book" style="color: #bbc7ce"></i>Tambah Buku</a>
+          </li>
+          <li class="sidebar-item">
+            <a href="./cari.html"><i class="fas fa-search" style="color: #bbc7ce"></i></i>Cari Buku</a>
+          </li>
+        </ul>
+        <div class="search-bar" style="display: none;">
+          <input type="text" id="searchInput" placeholder="Cari buku"/>
+        </div>
+        
+      </aside>
+      <!-- Sidebar content end -->
+
+      <!-- Main content  -->
+      <main class="main-content">
+        <section id="tambahDataBuku">
+          <h2 class="headerTambahBuku">Tambah Data Buku <span>Ichsan's Bookshelf</span></h2>
+          <form id="addBookForm" class="form">
+            <label for="title" class="label labelFirst">Judul:</label>
+            <input type="text" id="title" class="input" placeholder="Masukan Judul Buku" required><br>
+        
+            <label for="author" class="label">Penulis:</label>
+            <input type="text" id="author" class="input" placeholder="Masukan Nama Penulis" required><br>
+        
+            <label for="year" class="label">Tahun Terbit:</label>
+            <input type="date" id="year" class="input" required><br>
+        
+            <div class="checkbox-container">
+              <input type="checkbox" id="isComplete" class="checkbox">
+              <label for="isComplete" class="checkbox-label">Is Complete</label>
+            </div>
+        
+            <button type="submit" class="submit-button">Tambah Buku</button>
+          </form>
+        </section>
+      </main>
+
+      <section id="tambahDataBuku" style="display: none;">
+        <!-- karena saya menggunakan 1 file javascript maka file javascrip saya akan error jika id yang di perlukan tidak ada  -->
+          <div class="bookshelf" id="unreadShelf"></div>
+          <div class="bookshelf" id="readShelf"></div>
+      </section>
+      <!-- Main content end -->
+    </div>
+
+    <footer>
+      <div class="xsmall">Developed by Mochamad Ichsan NR &copy; <a href="https://github.com/D-oxys">Doxys </a>2023</div>
+      <p class="xsmall hidden">Sekolah Tinggi Teknlogi Bandung</p>
+    </footer>
+  </body>
+  <script src="../script.js"></script>
+</html>

@@ -1,0 +1,410 @@
+/* Reset default styling */
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+/* Basic styling */
+body {
+  font-family: "Source Sans Pro", Arial, sans-serif;
+  background-color: #ecf0f5;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #3c8dbc;
+  color: white;
+  padding: 0.6rem;
+}
+
+header h2 {
+  font-weight: 600;
+  text-align: left;
+}
+
+.container {
+  display: grid;
+  min-height: 84vh;
+  grid-template-columns: 0.69fr 3.31fr;
+  gap: 0.25rem;
+}
+/* sidebar style */
+.sidebar {
+  background-color: #222d32;
+  padding-bottom: 2rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.headerSidebar {
+  font-size: small;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: #1a2226;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  color: #43515a;
+  text-decoration: none;
+}
+
+.sidebar-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-item {
+  margin-bottom: 0rem;
+}
+
+.fas {
+  margin-right: 8px;
+}
+
+.sidebar-item a {
+  font-size: 14px;
+  font-weight: 400;
+  display: block;
+  padding: 0.8rem;
+  color: #bbc7ce;
+  text-decoration: none;
+  transition: border-left-color 0.3s;
+  transition: background-color 0.3s;
+}
+
+.sidebar-item a:hover {
+  border-left: 3px solid #3c8dbc;
+  background-color: #1e282c;
+  color: #ffffff;
+}
+
+.search-bar {
+  background-color: #f1f1f1;
+  padding: 0.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: auto;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.search-bar input {
+  border: none;
+  outline: none;
+}
+
+.search-bar input:focus {
+  border: none;
+}
+
+/* sidebar style end */
+
+/* mainConten style */
+.main-content {
+  padding: 1rem;
+  border: 1px solid #ddd;
+}
+/* tambah data style */
+.headerTambahBuku {
+  font-size: 24px;
+  font-weight: 500;
+  color: #333333;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+}
+
+.headerTambahBuku span {
+  color: #777777;
+  font-size: 15px;
+  font-weight: 100;
+}
+
+.form {
+  border: 1px solid #ddd;
+  border-top: 3px solid #00c0ef;
+  background-color: #ffffff;
+  padding: 1rem;
+  padding-bottom: 2rem;
+  margin-left: 0%;
+  margin-bottom: 1.5rem;
+}
+
+.label {
+  display: block;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 16px;
+  font-weight: 500;
+  color: #1f2937;
+}
+.labelFirst {
+  margin-top: 0;
+}
+
+.input {
+  background-color: #f3f4f6;
+  border: 1px solid #d1d5db;
+  color: #374151;
+  font-size: 0.875rem;
+  border-radius: 0.375rem;
+  padding: 0.625rem 1rem;
+  width: 95%;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1);
+  outline: none;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.checkbox {
+  display: none;
+  width: 1rem;
+  height: 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.25rem;
+  margin-top: 0.8rem;
+  margin-right: 0.5rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.checkbox:checked {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1);
+}
+
+.checkbox-label {
+  display: none;
+  font-size: 0.875rem;
+  margin-top: 0.8rem;
+  font-weight: 500;
+  color: #1f2937;
+}
+
+.submit-button {
+  background-color: #2563eb;
+  color: #fff;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 0.375rem;
+  padding: 0.625rem 1rem;
+  width: 98.4%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #1d4ed8;
+}
+/* tambah data end */
+
+/* daftar buku style */
+.cardHeader {
+  font-size: 18px;
+  color: #444444;
+  font-weight: 500;
+  border: 1px solid #ddd;
+  border-top: 3px solid #00c0ef;
+  background-color: #ffffff;
+  padding: 0.7rem;
+}
+
+.border2 {
+  border-top: 3px solid #f39c12;
+}
+
+.bookshelf {
+  border: 1px solid #ddd;
+  border-top: none;
+  background-color: #ffffff;
+  padding: 1rem;
+  padding-bottom: 2rem;
+  margin-left: 0%;
+  margin-bottom: 1.5rem;
+}
+
+.book-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #ffffff;
+  font-weight: 600;
+  padding: 1rem;
+  background-color: #00a65a;
+  margin-bottom: 1.5rem;
+  border-radius: 3px;
+}
+
+.book-info {
+  flex: 1;
+}
+
+.button-container {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.read-button,
+.delete-button {
+  padding: 0.8rem;
+  font-size: 0.875rem;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.read-button {
+  background-color: rgb(59 130 246);
+  color: white;
+}
+
+.read-button:hover {
+  background-color: rgb(29 78 216);
+}
+
+.read-button:focus {
+  background-color: rgb(30 64 175);
+}
+
+.delete-button {
+  background-color: rgb(239 68 68);
+  color: white;
+}
+
+.delete-button:hover {
+  background-color: rgb(220 38 38);
+}
+
+.delete-button:focus {
+  background-color: rgb(185 28 28);
+}
+
+/* end main style */
+
+footer {
+  font-size: smaller;
+  font-weight: 600;
+  background-color: #ffffff;
+  color: #444444;
+  text-align: left;
+  padding: 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+footer a {
+  color: #3c8dbc;
+  text-decoration: none;
+}
+footer p {
+  margin: 0;
+  margin-left: auto;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 100%;
+    min-height: 84vh;
+  }
+
+  header h2 {
+    font-size: medium;
+  }
+
+  .search-bar input {
+    width: 100%;
+    height: 100%;
+  }
+
+  .search-bar input:focus {
+    border: none;
+  }
+
+  /* Menyembunyikan sidebar pada layar kecil */
+  .sidebar {
+    display: none;
+  }
+
+  .show-sidebar .sidebar {
+    display: flex;
+  }
+
+  .input {
+    width: 83%;
+  }
+
+  /* Style untuk hamburger menu */
+  #hamburger {
+    display: block;
+    font-size: 24px;
+    cursor: pointer;
+    color: #ffffff;
+    margin-right: 1rem;
+  }
+
+  /* Tampilan sidebar yang muncul ketika hamburger di klik */
+  .show-sidebar .sidebar {
+    display: flex;
+  }
+
+  .cardHeader {
+    font-size: 10px;
+    padding: 0.5rem;
+  }
+
+  .bookshelf {
+    padding: 0.5rem;
+    padding-bottom: 1rem;
+    margin-left: 0%;
+    margin-bottom: 0.75rem;
+  }
+
+  .book-card {
+    font-size: smaller;
+    font-weight: 600;
+    padding: 0.5rem;
+  }
+
+  .book-info p,
+  span {
+    font-size: smaller;
+  }
+
+  .read-button,
+  .delete-button {
+    padding: 0.5rem;
+    font-size: 0.5rem;
+    border-radius: 0.25rem;
+  }
+
+  .xsmall {
+    font-size: x-small;
+  }
+
+  .hidden {
+    display: none;
+  }
+}
